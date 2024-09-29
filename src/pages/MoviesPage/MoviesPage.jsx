@@ -13,35 +13,15 @@ const options = {
 const MoviesPage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [query, setQuery] = useState(searchParams.get('query') || '');
-  // const [query, setQuery] = useState('');
-  const [movies, setMovies] = useState([]);
+   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
     if (query) {
       handleSearch();
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [query]);
+     }, []);
 
-  // const [movies, setMovies] = useSearchParams();
-  // const query = searchParams.get('query') ?? '';
-
-  // const handleSearch = () => {
-  //   const url = `https://api.themoviedb.org/3/search/movie?query=${query}&language=en-US&page=1`;
-  //   axios.get(url, options)
-  //     .then(response => setMovies(response.data.results))
-  //     .catch(err => console.error(err));
-  // };
-
-  // const handleSearch = () => {
-  //   const url = `https://api.themoviedb.org/3/search/movie?query=${query}&language=en-US&page=1`;
-  //   axios.get(url, options)
-  //     .then(response => setMovies(response.data.results))
-  //     .catch(err => console.error(err));
-  //   setSearchParams({ query });
-  // };
-
-  const handleSearch = useCallback(async () => {
+    const handleSearch = useCallback(async () => {
     const url = `https://api.themoviedb.org/3/search/movie?query=${query}&language=en-US&page=1`;
     try {
       const response = await axios.get(url, options);
@@ -49,17 +29,14 @@ const MoviesPage = () => {
     } catch (err) {
       console.error(err);
     }
-    setSearchParams({ query }); // Update URL params after successful search
+    setSearchParams({ query });
   }, [query, setSearchParams]);
 
   const handleInputChange = (e) => {
     setQuery(e.target.value);
-    // setSearchParams({ query: e.target.value });
-  };
+   };
 
-  // const memorizedMovies = useMemo(() => movies, [movies]);
-
-  return (
+   return (
     <div className={css.moviespage}>
       <h1>Search Movies</h1>
       <div className={css.search_wrap}>

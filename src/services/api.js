@@ -26,18 +26,3 @@ export const fetchMovieById = async movieId => {
     const { data } = await axios.get(`movie/${movieId}/credits?language=en-US`, options);
     return data.cast;
   };
-
-// export const fetchUserById = async userId => {
-//   const { data } = await axios.get(`users/${userId}`);
-//   return data;
-// };
-
-// export const fetchPostsByUserId = async userId => {
-//   const { data } = await axios.get(`posts/user/${userId}`);
-//   return data.posts;
-// };
-
-// export const fetchPostById = async postId => {
-//   const { data } = await axios.get(`posts/${postId}`);
-//   return data;
-// };
