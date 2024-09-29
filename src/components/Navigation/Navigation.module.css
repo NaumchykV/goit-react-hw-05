@@ -1,0 +1,14 @@
+.link{
+    color:black;
+    font-weight: bold;
+  }
+  .activeLink{
+    color: red;
+    font-weight: bold;
+  }
+  .wrapper_links{
+    display: flex;
+    gap:15px;
+    margin: 15px;
+    border-bottom: 2px solid #000;
+  }

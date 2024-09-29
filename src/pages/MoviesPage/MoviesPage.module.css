@@ -1,0 +1,18 @@
+.moviespage {
+    margin-left: 15px;
+}
+
+.search_wrap {
+    display: flex;
+    gap:12px;
+}
+
+.button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button:hover {
+    font-weight: 600;
+}
+

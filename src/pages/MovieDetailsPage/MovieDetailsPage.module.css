@@ -1,0 +1,24 @@
+.movie_details {
+    margin-left: 15px;
+};
+
+.goback {
+    margin-top: 20px;
+}
+
+.overview_p {
+    max-width: 500px;
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.cast {
+    max-width: 500px;
+}
+
+.review {
+    max-width: 500px;
+}
